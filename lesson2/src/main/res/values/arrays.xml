@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="alert_dialog_lines">
+        <item>Hello</item>
+        <item>How are you?</item>
+        <item>wasup?</item>
+    </string-array>
+</resources>
