@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyThermometer">
+        <attr name="term_color_background" format="color"/>
+        <attr name="term_color_scale" format="color"/>
+        <attr name="term_color_bar" format="color"/>
+        <attr name="term_color_hot" format="color"/>
+        <attr name="term_color_cold" format="color"/>
+        <attr name="term_value" format="float"/>
+    </declare-styleable>
+</resources>
