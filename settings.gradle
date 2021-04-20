@@ -1,3 +1,4 @@
+include ':lesson2:mythermometer'
 include ':lesson2'
 include ':lesson1'
 include ':app'
