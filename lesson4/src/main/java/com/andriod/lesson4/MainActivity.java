@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.andriod.lesson4.model.History;
 import com.andriod.lesson4.model.OpenWeatherData;
 import com.squareup.picasso.Picasso;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements WeatherManager.Li
     private TextView textTemperatureValue;
     private ImageView imageView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity implements WeatherManager.Li
         imageView = findViewById(R.id.imageView);
 
         Button button = findViewById(R.id.button);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentContainer, new HistoryFragment())
+                .commit();
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,5 +52,7 @@ public class MainActivity extends AppCompatActivity implements WeatherManager.Li
                 .load(String.format("http://openweathermap.org/img/w/%s.png", data.getIcon()))
                 .fit()
                 .into(imageView);
+
+        HistoryAdapter.getInstance().add(new History(data));
     }
 }
