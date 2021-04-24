@@ -1,3 +1,5 @@
+include ':lesson6:sendbroadcast'
+include ':lesson6'
 include ':lesson4'
 include ':lesson2:mythermometer'
 include ':lesson2'
